@@ -2,32 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFBCBC;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.container-top {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 50vh;
+  margin-top: 5px;
+  margin-left: 10px;
+  gap: 10px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+.row {
+  display: flex;
+  gap: 10px;
+
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.rectangle {
+  background-color: grey;
+  width: 264px;
+  height: 100px;
+  border: 1px solid red;
+}
+
+.container-bottom {
+  width: 100vw;
+  height: 50vh;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+}
+
+.square-row {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
 }
